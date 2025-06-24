@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: webapp
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 80
       targetPort: 80
       nodePort: 30020
   selector:
